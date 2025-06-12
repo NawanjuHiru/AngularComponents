@@ -1,0 +1,47 @@
+<div class="container">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Destructive</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of inputRows">
+
+        <!-- Default column -->
+        <td class="label">{{ row.label }}</td>
+        <td>
+          <div class="form-group" [ngClass]="row.class">
+            <label>Label</label><br>
+            <input
+              type="text"
+              placeholder="Email"
+              [disabled]="row.disabled"
+              [(ngModel)]="row.defaultValue"
+            />
+            <button [disabled]="row.disabled">Subscribe</button><br>
+            <small>Enter your email address</small>
+          </div>
+        </td>
+
+        <!-- Destructive column -->
+        <td>
+          <div class="form-group destructive" [ngClass]="row.class">
+            <label>Label</label><br>
+            <input
+              type="text"
+              placeholder="Email"
+              [disabled]="row.disabled"
+              [(ngModel)]="row.destructiveValue"
+            />
+            <button [disabled]="row.disabled">Subscribe</button><br>
+            <small>Enter your email address</small>
+            <p class="error" *ngIf="!row.disabled">Your one-time password must be 6 characters.</p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

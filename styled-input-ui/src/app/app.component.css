@@ -1,0 +1,115 @@
+.container {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.state-label {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  align-self: flex-start;
+  padding: 0.4rem 1rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+small {
+  color: #666;
+  font-size: 12px;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+}
+
+/* STATES */
+.focus-empty input:focus {
+  border: 2px solid #000;
+}
+
+.focus-filled input:focus {
+  border: 2px solid #000;
+}
+
+.filled input {
+  background-color: white;
+}
+
+.disabled input {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+  color: #999;
+}
+
+.disabled button {
+  background-color: #ccc;
+}
+
+/* DESTRUCTIVE STYLES */
+.destructive input {
+  border: 1px solid #ccc;
+}
+
+.destructive.focus-empty input:focus,
+.destructive.focus-filled input:focus,
+.destructive.filled input {
+  border: 2px solid red;
+}
+
+.destructive label,
+.destructive .error-text {
+  color: red;
+}
+
+.destructive.disabled input {
+  color: #999;
+  background-color: #f0f0f0;
+  border-color: #ccc;
+}
+
+.destructive.disabled label,
+.destructive.disabled .error-text {
+  color: #999;
+}
+p {
+  color: red;
+}
