@@ -1,0 +1,45 @@
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  border: 2px dashed violet;
+}
+
+.grid-header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.grid-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.grid-cell textarea,
+.grid-cell input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.grid-cell.focus textarea,
+.grid-cell.focus input {
+  border-color: black;
+}
+
+.grid-cell.destructive label {
+  color: red;
+}
+
+.grid-cell.destructive textarea,
+.grid-cell.destructive input {
+  border-color: red;
+}
+
+.grid-cell .error {
+  color: red;
+  font-size: 0.875rem;
+}

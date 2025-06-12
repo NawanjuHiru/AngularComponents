@@ -1,0 +1,76 @@
+.form-table {
+  width: 100%;
+  border-spacing: 2rem;
+
+  th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  td {
+    vertical-align: top;
+  }
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  label {
+    font-weight: 500;
+    color: #000;
+  }
+
+  textarea,
+  input[type="email"] {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+  }
+
+  textarea:focus,
+  input:focus {
+    outline: none;
+    border-color: #000;
+  }
+
+  &.filled textarea,
+  &.filled input {
+    background-color: #fafafa;
+  }
+
+  &.focus textarea,
+  &.focus input {
+    border: 2px solid #000;
+  }
+
+  &.disabled textarea,
+  &.disabled input {
+    background-color: #f0f0f0;
+    color: #aaa;
+    cursor: not-allowed;
+  }
+
+  &.disabled label {
+    color: #aaa;
+  }
+
+  &.error label {
+    color: red;
+  }
+
+  &.error textarea,
+  &.error input {
+    border-color: red;
+  }
+
+  .error-text {
+    font-size: 0.8rem;
+    color: red;
+  }
+}

@@ -1,0 +1,18 @@
+<button
+  [ngClass]="[
+    variant,
+    state,
+    destructive ? 'destructive' : '',
+    state === 'loading' ? 'loading' : ''
+  ]"
+  [disabled]="state === 'disabled' || state === 'loading'"
+>
+  <ng-container *ngIf="state === 'loading'; else normalContent">
+    <span class="spinner"></span>
+    Loading...
+  </ng-container>
+
+  <ng-template #normalContent>
+    {{ label }}
+  </ng-template>
+</button>
